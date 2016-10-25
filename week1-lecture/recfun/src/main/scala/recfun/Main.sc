@@ -22,4 +22,33 @@ object recfun {
   !balance(":-)".toList)
 
   !balance("())(".toList)
+
+  //Count change
+  def countChange(money: Int, coins: List[Int]): Int = {
+    def degnerate(money: Int, coins: List[Int], count: Int): Int = {
+      if (coins.isEmpty)
+        count
+      // use all coins in hand, stop and return current solutions count
+      else if (money == 0)
+        degnerate(money, coins.tail, count + 1)
+      // find way to pay, add 1 to solution count and try next coins
+      else if (money - coins.head < 0)
+        degnerate(money, coins.tail, count)
+      // coins.head will exceed money, use next coin instead
+      else
+        degnerate(money - coins.head, coins, degnerate(money - coins.head, coins.tail, 0))
+      // coins.head won't exceed, use head coin to pay
+    }
+
+    if (money == 0) 1 else degnerate(money, coins, 0)
+  }
+
+  countChange(0, List(1, 2))
+  countChange(4, List())
+  countChange(4, List(1))
+  countChange(4, List(1, 2))
+
+  countChange(300, List(5, 10, 20, 50, 100, 200, 500)) // 1022
+  countChange(301, List(5, 10, 20, 50, 100, 200, 500)) // 0
+  countChange(300, List(500, 5, 50, 100, 20, 200, 10)) // 1022
 }
