@@ -23,18 +23,20 @@ object Main {
   /**
    * Exercise 2
    */
-    def balance(chars: List[Char]): Boolean = {
-      if (chars.isEmpty) true
-      else if (chars.head == "(" && findClose(chars.tail))
-        balance(chars.tail)
-      else false
+  def balance(chars: List[Char]): Boolean = {
 
-      def findClose(chars: List[Char]): Boolean = {
-        if (chars.isEmpty) false
-        else if (chars.head == ")") true
-        else findClose(chars.tail)
-      }
+    def pairOpen(count: Int, chars: List[Char]): Boolean = {
+
+      if (chars.isEmpty)
+        if (count == 0) true else false
+      else if (count < 0) false
+      else if (chars.head == '(') pairOpen(count + 1, chars.tail)
+      else if (chars.head == ')') pairOpen(count - 1, chars.tail)
+      else pairOpen(count, chars.tail)
     }
+
+    pairOpen(0, chars)
+  }
   
   /**
    * Exercise 3
