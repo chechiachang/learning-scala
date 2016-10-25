@@ -41,9 +41,22 @@ object Main {
   /**
    * Exercise 3
    */
-    def countChange(money: Int, coins: List[Int]): Int = {
-      if(coins.isEmpty) 1
-      else if()
-
+  def countChange(money: Int, coins: List[Int]): Int = {
+    def degnerate(money: Int, coins: List[Int], count: Int): Int = {
+      if (coins.isEmpty)
+        count
+      // use all coins in hand, stop and return current solutions count
+      else if (money == 0)
+        degnerate(money, coins.tail, count + 1)
+      // find way to pay, add 1 to solution count and try next coins
+      else if (money - coins.head < 0)
+        degnerate(money, coins.tail, count)
+      // coins.head will exceed money, use next coin instead
+      else
+        degnerate(money - coins.head, coins, degnerate(money - coins.head, coins.tail, 0))
+      // coins.head won't exceed, use head coin to pay
     }
+
+    if (money == 0) 1 else degnerate(money, coins, 0)
+  }
   }
