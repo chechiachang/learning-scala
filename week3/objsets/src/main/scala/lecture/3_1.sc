@@ -34,3 +34,6 @@ class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet{
 val t1 = new NonEmpty(3, Empty, Empty)
 val t2 = new NonEmpty(5, Empty, Empty)
 val t3 = t1 union t2
+/**
+  * Created by david.chang on 2016/11/5.
+  */
