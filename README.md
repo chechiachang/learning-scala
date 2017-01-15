@@ -16,7 +16,7 @@ Under the playground package, are my practicing questions and solutions. The mai
 ### Programming in Scala
 
 In this directory contains my learning notes reading a book with the same title, 
-Programming in Scala, 3rd ed.
-This book is recommended by the [scala-lang.org](https://www.scala-lang.org/documentation/books.html) and its marvelous. Strongly recommended.
+[Programming in Scala, 3rd ed.](https://www.scala-lang.org/documentation/books.html)
+This book is recommended by the [scala-lang.org](https://www.scala-lang.org/) and its marvelous. Strongly recommended.
 
  
