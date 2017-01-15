@@ -77,7 +77,8 @@ object Huffman {
    */
     def times(chars: List[Char]): List[(Char, Int)] = chars match {
       case List() => List()
-
+      case List(c: Char) => List((c, 1))
+      case y :: ys => (y, 1) :: times(ys)
     }
   
   /**
