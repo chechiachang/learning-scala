@@ -1,4 +1,4 @@
-# learning-scala
+# Learning-scala
 
 This is my practicing project to learning scala. Feel free to browse and you'll find nothing more than some rookie pragram and notes lol.
 
