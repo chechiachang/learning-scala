@@ -74,5 +74,6 @@ object week5 {
         else y :: merge(xs, ys1)
     }
 
+  val nums = List(2, -3, 6, 9, 0)
+  mergeSort(nums)
 }
-1/2
