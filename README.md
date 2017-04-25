@@ -1,6 +1,6 @@
 # Learning-scala
 
-This is my practicing project to learning scala. Feel free to browse and you'll find nothing more than some rookie pragram and notes lol.
+This is my practicing project to learning scala. Feel free to browse and you'll find nothing more than some rookie pragram and notes lol. 
 
 ### Functional Programming Principles in Scala
 Course on Coursea by Prof. Martin Odersky
