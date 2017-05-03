@@ -22,5 +22,3 @@ In this directory contains my learning notes reading a book with the same title,
 [Programming in Scala, 3rd ed.](https://www.scala-lang.org/documentation/books.html)
 
 This book is recommended by the [scala-lang.org](https://www.scala-lang.org/) and its marvelous. Strongly recommended.
-
- 
