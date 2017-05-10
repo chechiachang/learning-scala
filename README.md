@@ -3,7 +3,7 @@
 This is my practicing project to learning scala. Feel free to browse and you'll find nothing more than some rookie pragram and notes lol. 
 
 ### Functional Programming Principles in Scala
-Course on Coursea by Prof. Martin Odersky
+Course on Coursea by Prof. Martin Odersky 
 [Course link](https://www.coursera.org/learn/progfun1/home)
 
 It's a basic (but very inspiring) lectures taught by the father of scala.
